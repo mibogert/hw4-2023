@@ -24,6 +24,7 @@ a.skip{
 .container {
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   row-gap: 30px;
 }
 /* Requirement 4 code here -- Do not remove this comment. */
@@ -52,39 +53,47 @@ a.skip{
   /* Requirement 7 code here -- Do not remove this comment. */
 
   .about-image, .clients-image, .method-image, .contact-image {
-    grid-column: span 3;
+    grid-column: 1 / 4;
     max-height: 500px;
   }
 
   /* Requirement 8 code here -- Do not remove this comment. */
 
-   .about-image, .about {
-    grid-row: span 1;
+  .about, .about-image {
+    grid-row: 1;
+  }
+
+  .clients, .clients-image {
+    grid-row: 2;
   }
 
 
+  .method, .method-image {
+    grid-row: 3;
+  }
+
+  .contact, .contact-image {
+    grid-row: 4;
+  }
+ /* Requirement 9 code here -- Do not remove this comment. */
+ 
+ .text {
+    text-align: center;
+    max-height: 40vh;
+    overflow: scroll;
+  }
 
 
+/* Requirement 10 code here -- Do not remove this comment. */
 
-
-
-
-
-  /* Requirement 9 code here -- Do not remove this comment. */
-
-
-
-
-  /*Add the media query here.  Make sure to */
 
 @media {
   nav{
     padding-top: 35px;
-    /* Requirement 10 code here -- Do not remove this comment. */
-
     text-align:right
-
   }
+  }
+  /*Add the media query here.  Make sure to */
 
   nav li{
     margin-left: 5%;
@@ -94,20 +103,33 @@ a.skip{
   
   /* Requirement 11 code here -- Do not remove this comment. */
 
-
+  .skip:focus {
+    position:absolute;
+    left: 0px;
+    top: 20px;
+  }
 
   /* Requirement 12 code here -- Do not remove this comment. */
-  
-
+ 
+  .container {
+    display: grid;
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 300px 300px 300px 300px;
+  }
 
   /* Requirement 13 code here -- Do not remove this comment. */
  
+  .about, .method, .clients-image, .contact-image {
+  grid-column: 3 / span 2;
+ }
 
-  /* Requirement 14 code here -- Do not remove this comment. */
- 
+ /* Requirement 14 code here -- Do not remove this comment. */
 
-  /* Requirement 15 code here -- Do not remove this comment. */
+ .clients, .contact, .about-image, .method image {
+  grid-column: 2 / span 2;
 }
+  /* Requirement 15 code here -- Do not remove this comment. */
+
 
 /** Code for prefers reduced motion **/
 /* Make no changes below this line.
