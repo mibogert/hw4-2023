@@ -30,7 +30,7 @@ a.skip{
 
 .intro {
   background-color: #858585;
-  background-image: url(/images/header.jpg);
+  background-image: url(../images/header.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
